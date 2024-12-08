@@ -7,13 +7,15 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { BookOpen, HelpCircle, Info, DollarSign } from "lucide-react";
+import { BookOpen, HelpCircle, Info, DollarSign, LogIn, UserPlus } from "lucide-react";
 
 const menuItems = [
   { label: "Blog", path: "/blog", icon: BookOpen },
   { label: "What We Do", path: "/services", icon: HelpCircle },
   { label: "About Us", path: "/about", icon: Info },
   { label: "Pricing", path: "/pricing", icon: DollarSign },
+  { label: "Login", path: "/login", icon: LogIn },
+  { label: "Sign Up", path: "/signup", icon: UserPlus },
 ];
 
 const AppSidebar = () => {

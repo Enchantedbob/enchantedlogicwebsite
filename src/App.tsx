@@ -7,6 +7,8 @@ import { SidebarProvider } from "@/components/ui/sidebar";
 import AppSidebar from "./components/layout/Sidebar";
 import Footer from "./components/layout/Footer";
 import Index from "./pages/Index";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +25,8 @@ const App = () => (
               <main className="flex-grow">
                 <Routes>
                   <Route path="/" element={<Index />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/signup" element={<Signup />} />
                 </Routes>
               </main>
               <Footer />
