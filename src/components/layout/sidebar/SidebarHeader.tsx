@@ -1,8 +1,5 @@
 const SidebarHeader = () => {
-  return (
-    <div className="p-6">
-    </div>
-  );
+  return null;
 };
 
 export default SidebarHeader;
