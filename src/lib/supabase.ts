@@ -6,7 +6,8 @@ const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
 // Create a dummy client if environment variables are not set
 const createDummyClient = () => ({
   auth: {
-    signIn: () => Promise.reject(new Error('Supabase not configured')),
+    signInWithPassword: () => Promise.reject(new Error('Supabase not configured')),
+    signUp: () => Promise.reject(new Error('Supabase not configured')),
     signOut: () => Promise.reject(new Error('Supabase not configured')),
   },
   from: () => ({
