@@ -15,7 +15,7 @@ export function SignupForm({ accessCode }: SignupFormProps) {
       providers={[]}
       view="sign_up"
       redirectTo={window.location.origin}
-      onSuccess={async (session) => {
+      onAuthSuccess={async (session) => {
         if (session?.user) {
           await supabase
             .from('access_codes')
