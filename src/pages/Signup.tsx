@@ -27,7 +27,7 @@ export default function Signup() {
     <div className="container mx-auto flex items-center justify-center min-h-screen p-4">
       <Card className="w-full max-w-md">
         <CardHeader>
-          <CardTitle className="text-2xl text-center">Create Account</CardTitle>
+          <CardTitle className="text-2xl text-center">Welcome to EnchantedLogic.com</CardTitle>
         </CardHeader>
         <CardContent>
           {!isVerified ? (

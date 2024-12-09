@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Users } from "lucide-react";
+import { Users, Home } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { useToast } from "@/components/ui/use-toast";
 
@@ -33,27 +33,15 @@ const AppSidebar = () => {
       <nav className="flex-1 p-4">
         <ul className="space-y-2">
           <li>
-            <Link to="/" className="block p-2 hover:bg-accent rounded-md">
-              Home
+            <Link to="/" className="flex items-center p-2 hover:bg-accent rounded-md space-x-2">
+              <Home className="h-4 w-4" />
+              <span>Home</span>
             </Link>
           </li>
           <li>
-            <Link to="/login" className="block p-2 hover:bg-accent rounded-md">
-              Login
-            </Link>
-          </li>
-          <li>
-            <Link to="/signup" className="block p-2 hover:bg-accent rounded-md">
-              Sign Up
-            </Link>
-          </li>
-          <li>
-            <Link 
-              to="/employee-access" 
-              className="flex items-center p-2 hover:bg-accent rounded-md space-x-2"
-            >
+            <Link to="/login" className="flex items-center p-2 hover:bg-accent rounded-md space-x-2">
               <Users className="h-4 w-4" />
-              <span>Employee Access</span>
+              <span>Staff Access</span>
             </Link>
           </li>
           <li>
