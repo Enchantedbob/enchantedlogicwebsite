@@ -1,18 +1,14 @@
-import { Auth } from "@supabase/auth-ui-react";
-import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { useToast } from "@/components/ui/use-toast";
+import { AccessCodeVerification } from "@/components/auth/AccessCodeVerification";
+import { SignupForm } from "@/components/auth/SignupForm";
 
 export default function Signup() {
   const navigate = useNavigate();
-  const { toast } = useToast();
-  const [accessCode, setAccessCode] = useState("");
   const [isVerified, setIsVerified] = useState(false);
+  const [verifiedCode, setVerifiedCode] = useState("");
 
   useEffect(() => {
     supabase.auth.onAuthStateChange((event, session) => {
@@ -22,37 +18,9 @@ export default function Signup() {
     });
   }, [navigate]);
 
-  const verifyAccessCode = async () => {
-    const { data, error } = await supabase
-      .from('access_codes')
-      .select('*')
-      .eq('code', accessCode)
-      .eq('is_used', false)
-      .single();
-
-    if (error) {
-      toast({
-        title: "Error",
-        description: "Failed to verify access code",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    if (!data) {
-      toast({
-        title: "Invalid Code",
-        description: "Please enter a valid access code",
-        variant: "destructive",
-      });
-      return;
-    }
-
+  const handleVerified = (code: string) => {
+    setVerifiedCode(code);
     setIsVerified(true);
-    toast({
-      title: "Success",
-      description: "Access code verified successfully",
-    });
   };
 
   return (
@@ -63,48 +31,9 @@ export default function Signup() {
         </CardHeader>
         <CardContent>
           {!isVerified ? (
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <label htmlFor="accessCode" className="text-sm font-medium">
-                  Access Code
-                </label>
-                <Input
-                  id="accessCode"
-                  type="text"
-                  value={accessCode}
-                  onChange={(e) => setAccessCode(e.target.value)}
-                  placeholder="Enter your access code"
-                />
-              </div>
-              <Button 
-                className="w-full" 
-                onClick={verifyAccessCode}
-                disabled={!accessCode}
-              >
-                Verify Code
-              </Button>
-            </div>
+            <AccessCodeVerification onVerified={handleVerified} />
           ) : (
-            <Auth
-              supabaseClient={supabase}
-              appearance={{ theme: ThemeSupa }}
-              theme="light"
-              providers={[]}
-              view="sign_up"
-              onSuccess={async (session) => {
-                if (session?.user) {
-                  // Mark access code as used
-                  await supabase
-                    .from('access_codes')
-                    .update({ 
-                      is_used: true, 
-                      used_by: session.user.id,
-                      used_at: new Date().toISOString()
-                    })
-                    .eq('code', accessCode);
-                }
-              }}
-            />
+            <SignupForm accessCode={verifiedCode} />
           )}
         </CardContent>
       </Card>
