@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Home, Factory, ScrollText, Smartphone, DollarSign, Users, ShieldCheck } from "lucide-react";
+import { Home, Factory, ScrollText, Smartphone, DollarSign, Users, ShieldCheck, Users as StaffIcon } from "lucide-react";
 import HitCounter from "@/components/layout/sidebar/HitCounter";
 
 const Index = () => {
@@ -58,6 +58,12 @@ const Index = () => {
                 <Link to="/about" className="flex items-center p-1 hover:bg-blue-200 rounded-md">
                   <Users className="h-4 w-4" />
                   <span className="ml-1 text-left text-xs">Team</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/staff" className="flex items-center p-1 hover:bg-blue-200 rounded-md">
+                  <StaffIcon className="h-4 w-4" />
+                  <span className="ml-1 text-left text-xs">Staff</span>
                 </Link>
               </li>
               <li>
