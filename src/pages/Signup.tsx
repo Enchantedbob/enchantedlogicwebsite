@@ -91,7 +91,7 @@ export default function Signup() {
               theme="light"
               providers={[]}
               view="sign_up"
-              onSubmit={async ({ data: { session }}) => {
+              onSuccess={async (session) => {
                 if (session?.user) {
                   // Mark access code as used
                   await supabase
