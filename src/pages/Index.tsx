@@ -3,11 +3,6 @@ import { Link } from "react-router-dom";
 const Index = () => {
   return (
     <div className="animate-fade-in flex">
-      {/* Left Side Section - 20% width */}
-      <section className="w-1/5 bg-blue-100 min-h-[400px]">
-        {/* This section will be above the Chat icon height */}
-      </section>
-
       {/* Main Content - 80% width */}
       <div className="w-4/5">
         {/* Hero Section */}
@@ -22,6 +17,11 @@ const Index = () => {
               </p>
             </div>
           </div>
+        </section>
+
+        {/* Left Side Section - 20% width, now below the banner */}
+        <section className="w-1/5 bg-blue-100 min-h-[400px]">
+          {/* This section will be above the Chat icon height */}
         </section>
 
         {/* Features Section */}
