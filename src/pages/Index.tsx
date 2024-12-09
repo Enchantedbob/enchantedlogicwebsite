@@ -5,7 +5,7 @@ const Index = () => {
     <div className="animate-fade-in">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary to-secondary text-white py-20">
-        <div className="container mx-auto px-4">
+        <div className="w-4/5 ml-0 px-4">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Enchanted Logic
@@ -19,7 +19,7 @@ const Index = () => {
 
       {/* Features Section */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="w-4/5 ml-0 px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
             Why Choose Enchanted Logic?
           </h2>
