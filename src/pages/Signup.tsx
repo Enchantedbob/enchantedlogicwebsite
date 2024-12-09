@@ -91,16 +91,18 @@ export default function Signup() {
               theme="light"
               providers={[]}
               view="sign_up"
-              onAuthSuccess={async (session) => {
-                // Mark access code as used
-                await supabase
-                  .from('access_codes')
-                  .update({ 
-                    is_used: true, 
-                    used_by: session.user.id,
-                    used_at: new Date().toISOString()
-                  })
-                  .eq('code', accessCode);
+              onSignUp={async ({ session }) => {
+                if (session?.user) {
+                  // Mark access code as used
+                  await supabase
+                    .from('access_codes')
+                    .update({ 
+                      is_used: true, 
+                      used_by: session.user.id,
+                      used_at: new Date().toISOString()
+                    })
+                    .eq('code', accessCode);
+                }
               }}
             />
           )}
