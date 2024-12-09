@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Home, BookOpen, MessageSquare, DollarSign, Users, LogIn, Hash } from "lucide-react";
+import { Home, Factory, Smartphone, ScrollText, DollarSign, Users, LogIn, Hash, ShieldLock } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
@@ -40,38 +40,38 @@ const AppSidebar = () => {
           </li>
           <li>
             <Link to="/services" className="flex items-center p-2 hover:bg-accent rounded-md space-x-2">
-              <BookOpen className="h-4 w-4" />
-              <span>What We Do</span>
+              <Factory className="h-4 w-4" />
+              <span>We Make</span>
             </Link>
           </li>
           <li>
             <Link to="/blog" className="flex items-center p-2 hover:bg-accent rounded-md space-x-2">
-              <MessageSquare className="h-4 w-4" />
+              <ScrollText className="h-4 w-4" />
               <span>Blog</span>
             </Link>
           </li>
           <li>
             <Link to="/contact" className="flex items-center p-2 hover:bg-accent rounded-md space-x-2">
-              <MessageSquare className="h-4 w-4" />
-              <span>Contact Us</span>
+              <Smartphone className="h-4 w-4" />
+              <span>Reach Us</span>
             </Link>
           </li>
           <li>
             <Link to="/pricing" className="flex items-center p-2 hover:bg-accent rounded-md space-x-2">
               <DollarSign className="h-4 w-4" />
-              <span>Pricing</span>
+              <span>Money</span>
             </Link>
           </li>
           <li>
             <Link to="/about" className="flex items-center p-2 hover:bg-accent rounded-md space-x-2">
               <Users className="h-4 w-4" />
-              <span>About Us</span>
+              <span>Team</span>
             </Link>
           </li>
           <li>
             <Link to="/remove-me" className="flex items-center p-2 hover:bg-accent rounded-md space-x-2">
-              <Users className="h-4 w-4" />
-              <span>Remove Me</span>
+              <ShieldLock className="h-4 w-4" />
+              <span>GDPR+</span>
             </Link>
           </li>
           <li>
