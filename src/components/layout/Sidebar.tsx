@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Home, BookOpen, MessageSquare, DollarSign, Users, LogIn } from "lucide-react";
+import { Home, BookOpen, MessageSquare, DollarSign, Users, LogIn, Hash } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { useToast } from "@/components/ui/use-toast";
+import { useState } from "react";
 
 const AppSidebar = () => {
   const { toast } = useToast();
-
+  const [showHitCount, setShowHitCount] = useState(false);
+  
   const handleSignOut = async () => {
     const { error } = await supabase.auth.signOut();
     if (error) {
@@ -24,7 +26,7 @@ const AppSidebar = () => {
   };
 
   return (
-    <div className="hidden lg:flex h-screen w-64 flex-col fixed left-0 top-[300px] bottom-0 bg-background border-r">
+    <div className="hidden lg:flex h-screen w-64 flex-col fixed left-0 top-[300px] bottom-0 bg-background border-r overflow-y-auto">
       <div className="p-6">
         <span className="font-medium text-lg">Menu</span>
       </div>
@@ -81,8 +83,17 @@ const AppSidebar = () => {
         </ul>
       </nav>
       <div className="p-4 border-t">
-        <div className="bg-white p-2 rounded inline-block">
-          <span className="font-mono">000001</span>
+        <div 
+          className="relative cursor-pointer"
+          onMouseEnter={() => setShowHitCount(true)}
+          onMouseLeave={() => setShowHitCount(false)}
+        >
+          <Hash className="h-6 w-6 text-primary hover:text-secondary transition-colors" />
+          {showHitCount && (
+            <div className="absolute -bottom-8 left-0 bg-white p-2 rounded shadow-lg">
+              000001
+            </div>
+          )}
         </div>
       </div>
     </div>

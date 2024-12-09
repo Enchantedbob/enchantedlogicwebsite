@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-100 mt-20">
       <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h3 className="font-bold mb-4">Quick Links</h3>
             <nav className="flex flex-col space-y-2">
@@ -28,14 +28,10 @@ const Footer = () => {
               ))}
             </nav>
           </div>
-          <div>
-            <h3 className="font-bold mb-4">Contact Us</h3>
-            <p>Let us help you enhance your business logic.</p>
-          </div>
         </div>
       </div>
 
-      {/* Fixed Contact Button */}
+      {/* Fixed Chat Button */}
       <div className="fixed bottom-4 right-4">
         <button
           onClick={() => window.open("sms:+1234567890")}

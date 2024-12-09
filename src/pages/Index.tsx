@@ -11,7 +11,7 @@ const Index = () => {
               Enchanted Logic
             </h1>
             <p className="text-xl md:text-2xl mb-8">
-              Transform your business with intelligent automation and custom solutions
+              Transform your business with intelligent automation and custom solutions that will Make Money, Increase Efficiency and Save Time
             </p>
           </div>
         </div>
