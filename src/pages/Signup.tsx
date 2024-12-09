@@ -91,7 +91,7 @@ export default function Signup() {
               theme="light"
               providers={[]}
               view="sign_up"
-              onSuccess={async (session) => {
+              onAuthSuccess={async (session) => {
                 // Mark access code as used
                 await supabase
                   .from('access_codes')
