@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Home, Factory, Smartphone, ScrollText, DollarSign, Users, LogIn, ShieldCheck } from "lucide-react";
+import { Home, Factory, Smartphone, ScrollText, DollarSign, Users, LogIn, ShieldCheck, Users as StaffIcon } from "lucide-react";
 
 interface NavItem {
   to: string;
@@ -14,6 +14,7 @@ const navItems: NavItem[] = [
   { to: "/contact", icon: Smartphone, label: "Reach Us" },
   { to: "/pricing", icon: DollarSign, label: "Money" },
   { to: "/about", icon: Users, label: "Team" },
+  { to: "/staff", icon: StaffIcon, label: "Staff" },
   { to: "/remove-me", icon: ShieldCheck, label: "GDPR+" },
   { to: "/login", icon: LogIn, label: "Staff Access" },
 ];
