@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -14,13 +13,6 @@ const Index = () => {
             <p className="text-xl md:text-2xl mb-8">
               Transform your business with intelligent automation and custom solutions
             </p>
-            <Link
-              to="/services"
-              className="inline-flex items-center space-x-2 bg-white text-primary px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors"
-            >
-              <span>Discover Our Services</span>
-              <ArrowRight size={20} />
-            </Link>
           </div>
         </div>
       </section>

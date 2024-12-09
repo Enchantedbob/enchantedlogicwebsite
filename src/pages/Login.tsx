@@ -1,37 +1,27 @@
 import { Auth } from "@supabase/auth-ui-react";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
-import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 import { supabase } from "@/lib/supabase";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
-export default function Login() {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    // Check if user is already logged in
-    supabase.auth.onAuthStateChange((event, session) => {
-      if (session) {
-        navigate("/");
-      }
-    });
-  }, [navigate]);
-
+const Login = () => {
   return (
-    <div className="container mx-auto flex items-center justify-center min-h-screen p-4">
-      <Card className="w-full max-w-md">
-        <CardHeader>
-          <CardTitle className="text-2xl text-center">Welcome Back</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <Auth
-            supabaseClient={supabase}
-            appearance={{ theme: ThemeSupa }}
-            theme="light"
-            providers={[]}
-          />
-        </CardContent>
-      </Card>
+    <div className="container mx-auto px-4 py-8">
+      <div className="max-w-md mx-auto">
+        <h1 className="text-2xl font-bold mb-8 text-center">Staff Login</h1>
+        <Auth
+          supabaseClient={supabase}
+          appearance={{ theme: ThemeSupa }}
+          providers={[]}
+          redirectTo={`${window.location.origin}/`}
+        />
+        <div className="mt-4 text-center">
+          <Link to="/signup" className="text-primary hover:underline">
+            Need to create an account? Sign up here
+          </Link>
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default Login;

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 const Footer = () => {
   const menuItems = [
@@ -32,23 +32,11 @@ const Footer = () => {
             <h3 className="font-bold mb-4">Contact Us</h3>
             <p>Let us help you enhance your business logic.</p>
           </div>
-          <div>
-            <h3 className="font-bold mb-4">Hit Counter</h3>
-            <div className="bg-white p-2 rounded inline-block">
-              <span className="font-mono">000001</span>
-            </div>
-          </div>
         </div>
       </div>
 
-      {/* Fixed Contact Buttons */}
-      <div className="fixed bottom-4 right-4 flex flex-col space-y-2">
-        <button
-          onClick={() => window.location.href = "mailto:contact@enchantedlogic.com"}
-          className="bg-primary text-white p-3 rounded-full hover:bg-secondary transition-colors"
-        >
-          <Mail size={24} />
-        </button>
+      {/* Fixed Contact Button */}
+      <div className="fixed bottom-4 right-4">
         <button
           onClick={() => window.open("sms:+1234567890")}
           className="bg-primary text-white p-3 rounded-full hover:bg-secondary transition-colors"
