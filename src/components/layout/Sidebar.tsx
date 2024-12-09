@@ -1,7 +1,6 @@
 import { useToast } from "@/components/ui/use-toast";
 import { supabase } from "@/lib/supabase";
 import SidebarNavigation from "./sidebar/SidebarNavigation";
-import SidebarHeader from "./sidebar/SidebarHeader";
 import HitCounter from "./sidebar/HitCounter";
 
 const AppSidebar = () => {
@@ -24,8 +23,7 @@ const AppSidebar = () => {
   };
 
   return (
-    <div className="hidden lg:flex h-screen w-64 flex-col fixed left-0 top-[300px] bottom-0 bg-background border-r overflow-y-auto">
-      <SidebarHeader />
+    <div className="hidden lg:flex h-screen w-64 flex-col fixed left-0 top-0 bottom-0 bg-background border-r overflow-y-auto">
       <SidebarNavigation />
       <HitCounter />
     </div>
