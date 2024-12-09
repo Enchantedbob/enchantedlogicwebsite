@@ -19,8 +19,8 @@ const Index = () => {
       </section>
 
       <div className="flex">
-        {/* Left Side Section - 4% width */}
-        <section className="w-[4%] bg-blue-100 min-h-[400px]">
+        {/* Left Side Section - 20% width */}
+        <section className="w-1/5 bg-blue-100 min-h-[400px]">
           <nav className="p-1">
             <ul className="space-y-2">
               <li>
@@ -69,8 +69,8 @@ const Index = () => {
           </nav>
         </section>
 
-        {/* Main Content - 96% width to accommodate the new menu width */}
-        <div className="w-[96%]">
+        {/* Main Content - 80% width */}
+        <div className="w-4/5">
           {/* Content will be added here */}
         </div>
       </div>
