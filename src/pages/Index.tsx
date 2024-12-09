@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Home, BookOpen, MessageSquare, DollarSign, Users } from "lucide-react";
+import { Home, Factory, ScrollText, Smartphone, DollarSign, Users, ShieldCheck } from "lucide-react";
 
 const Index = () => {
   return (
@@ -31,38 +31,38 @@ const Index = () => {
               </li>
               <li>
                 <Link to="/services" className="flex items-center p-1 hover:bg-blue-200 rounded-md">
-                  <BookOpen className="h-4 w-4" />
-                  <span className="ml-1 text-left text-xs">What We Do</span>
+                  <Factory className="h-4 w-4" />
+                  <span className="ml-1 text-left text-xs">We Make</span>
                 </Link>
               </li>
               <li>
                 <Link to="/blog" className="flex items-center p-1 hover:bg-blue-200 rounded-md">
-                  <MessageSquare className="h-4 w-4" />
+                  <ScrollText className="h-4 w-4" />
                   <span className="ml-1 text-left text-xs">Blog</span>
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="flex items-center p-1 hover:bg-blue-200 rounded-md">
-                  <MessageSquare className="h-4 w-4" />
-                  <span className="ml-1 text-left text-xs">Contact Us</span>
+                  <Smartphone className="h-4 w-4" />
+                  <span className="ml-1 text-left text-xs">Reach Us</span>
                 </Link>
               </li>
               <li>
                 <Link to="/pricing" className="flex items-center p-1 hover:bg-blue-200 rounded-md">
                   <DollarSign className="h-4 w-4" />
-                  <span className="ml-1 text-left text-xs">Pricing</span>
+                  <span className="ml-1 text-left text-xs">Money</span>
                 </Link>
               </li>
               <li>
                 <Link to="/about" className="flex items-center p-1 hover:bg-blue-200 rounded-md">
                   <Users className="h-4 w-4" />
-                  <span className="ml-1 text-left text-xs">About Us</span>
+                  <span className="ml-1 text-left text-xs">Team</span>
                 </Link>
               </li>
               <li>
                 <Link to="/remove-me" className="flex items-center p-1 hover:bg-blue-200 rounded-md">
-                  <Users className="h-4 w-4" />
-                  <span className="ml-1 text-left text-xs">Remove Me</span>
+                  <ShieldCheck className="h-4 w-4" />
+                  <span className="ml-1 text-left text-xs">GDPR+</span>
                 </Link>
               </li>
             </ul>
