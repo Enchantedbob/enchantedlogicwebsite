@@ -1,47 +1,63 @@
 import { Link } from "react-router-dom";
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@/components/ui/sidebar";
-import { BookOpen, HelpCircle, Info, DollarSign, LogIn, UserPlus } from "lucide-react";
-
-const menuItems = [
-  { label: "Blog", path: "/blog", icon: BookOpen },
-  { label: "What We Do", path: "/services", icon: HelpCircle },
-  { label: "About Us", path: "/about", icon: Info },
-  { label: "Pricing", path: "/pricing", icon: DollarSign },
-  { label: "Login", path: "/login", icon: LogIn },
-  { label: "Sign Up", path: "/signup", icon: UserPlus },
-];
+import { Button } from "@/components/ui/button";
+import { supabase } from "@/lib/supabase";
+import { useToast } from "@/components/ui/use-toast";
 
 const AppSidebar = () => {
+  const { toast } = useToast();
+
+  const handleSignOut = async () => {
+    const { error } = await supabase.auth.signOut();
+    if (error) {
+      toast({
+        title: "Error signing out",
+        description: error.message,
+        variant: "destructive",
+      });
+    } else {
+      toast({
+        title: "Signed out successfully",
+        description: "You have been signed out of your account.",
+      });
+    }
+  };
+
   return (
-    <Sidebar>
-      <SidebarHeader className="p-4">
+    <div className="hidden lg:flex h-screen w-64 flex-col fixed left-0 top-0 bottom-0 bg-background border-r">
+      <div className="p-6">
         <Link to="/" className="flex items-center space-x-2">
-          <img src="/favicon.ico" alt="Favicon" className="w-8 h-8" />
-          <img src="/banner.png" alt="Enchanted Logic" className="h-12" />
+          <span className="font-bold text-2xl">Enchanted Logic</span>
         </Link>
-      </SidebarHeader>
-      <SidebarContent>
-        <SidebarMenu>
-          {menuItems.map((item) => (
-            <SidebarMenuItem key={item.path}>
-              <SidebarMenuButton asChild>
-                <Link to={item.path}>
-                  <item.icon className="w-4 h-4" />
-                  <span>{item.label}</span>
-                </Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          ))}
-        </SidebarMenu>
-      </SidebarContent>
-    </Sidebar>
+      </div>
+      <nav className="flex-1 p-4">
+        <ul className="space-y-2">
+          <li>
+            <Link to="/" className="block p-2 hover:bg-accent rounded-md">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/login" className="block p-2 hover:bg-accent rounded-md">
+              Login
+            </Link>
+          </li>
+          <li>
+            <Link to="/signup" className="block p-2 hover:bg-accent rounded-md">
+              Sign Up
+            </Link>
+          </li>
+          <li>
+            <Button
+              variant="ghost"
+              className="w-full justify-start"
+              onClick={handleSignOut}
+            >
+              Sign Out
+            </Button>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 };
 
