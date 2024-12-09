@@ -6,7 +6,7 @@ const HitCounter = () => {
 
   return (
     <div 
-      className="fixed bottom-4 left-4 cursor-pointer"
+      className="absolute bottom-4 left-4 cursor-pointer"
       onMouseEnter={() => setShowHitCount(true)}
       onMouseLeave={() => setShowHitCount(false)}
     >

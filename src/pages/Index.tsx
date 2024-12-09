@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Home, Factory, ScrollText, Smartphone, DollarSign, Users, ShieldCheck } from "lucide-react";
+import HitCounter from "@/components/layout/sidebar/HitCounter";
 
 const Index = () => {
   return (
@@ -20,7 +21,7 @@ const Index = () => {
 
       <div className="flex">
         {/* Left Side Section - 20% width */}
-        <section className="w-1/5 bg-blue-100 min-h-[400px]">
+        <section className="relative w-1/5 bg-blue-100 min-h-[400px]">
           <nav className="p-1">
             <ul className="space-y-2">
               <li>
@@ -67,6 +68,7 @@ const Index = () => {
               </li>
             </ul>
           </nav>
+          <HitCounter />
         </section>
 
         {/* Main Content - 80% width */}
