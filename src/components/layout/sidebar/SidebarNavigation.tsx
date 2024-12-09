@@ -14,7 +14,7 @@ const navItems: NavItem[] = [
   { to: "/contact", icon: Smartphone, label: "Reach Us" },
   { to: "/pricing", icon: DollarSign, label: "Money" },
   { to: "/about", icon: Users, label: "Team" },
-  { to: "/staff", icon: StaffIcon, label: "Staff" },
+  { to: "/login", icon: StaffIcon, label: "Staff" },
   { to: "/remove-me", icon: ShieldCheck, label: "GDPR+" },
   { to: "/login", icon: LogIn, label: "Staff Access" },
 ];
