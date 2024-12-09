@@ -18,6 +18,11 @@ const Index = () => {
       </section>
 
       <div className="flex">
+        {/* Left Side Section - 20% width */}
+        <section className="w-1/5 bg-blue-100 min-h-[400px]">
+          {/* This section will be above the Chat icon height */}
+        </section>
+
         {/* Main Content - 80% width */}
         <div className="w-4/5">
           {/* Features Section */}
@@ -53,11 +58,6 @@ const Index = () => {
             </div>
           </section>
         </div>
-
-        {/* Left Side Section - 20% width, now below the banner */}
-        <section className="w-1/5 bg-blue-100 min-h-[400px]">
-          {/* This section will be above the Chat icon height */}
-        </section>
       </div>
     </div>
   );
