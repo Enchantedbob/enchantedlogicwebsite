@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Home, Factory, Smartphone, ScrollText, DollarSign, Users, LogIn, Hash, ShieldLock } from "lucide-react";
+import { Home, Factory, Smartphone, ScrollText, DollarSign, Users, LogIn, Hash, ShieldCheck } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
@@ -70,7 +70,7 @@ const AppSidebar = () => {
           </li>
           <li>
             <Link to="/remove-me" className="flex items-center p-2 hover:bg-accent rounded-md space-x-2">
-              <ShieldLock className="h-4 w-4" />
+              <ShieldCheck className="h-4 w-4" />
               <span>GDPR+</span>
             </Link>
           </li>
