@@ -10,7 +10,9 @@ const HitCounter = () => {
       onMouseEnter={() => setShowHitCount(true)}
       onMouseLeave={() => setShowHitCount(false)}
     >
-      <Hash className="h-6 w-6 text-primary hover:text-secondary transition-colors" />
+      <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary hover:bg-secondary transition-colors">
+        <Hash className="h-6 w-6 text-white" />
+      </div>
       {showHitCount && (
         <div className="absolute -top-8 left-0 bg-white p-2 rounded shadow-lg">
           000001
