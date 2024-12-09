@@ -6,13 +6,13 @@ const HitCounter = () => {
 
   return (
     <div 
-      className="relative cursor-pointer"
+      className="fixed bottom-4 left-4 cursor-pointer"
       onMouseEnter={() => setShowHitCount(true)}
       onMouseLeave={() => setShowHitCount(false)}
     >
       <Hash className="h-6 w-6 text-primary hover:text-secondary transition-colors" />
       {showHitCount && (
-        <div className="absolute -bottom-8 left-0 bg-white p-2 rounded shadow-lg">
+        <div className="absolute -top-8 left-0 bg-white p-2 rounded shadow-lg">
           000001
         </div>
       )}

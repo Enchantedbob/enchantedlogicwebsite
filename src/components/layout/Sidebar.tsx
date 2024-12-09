@@ -27,9 +27,7 @@ const AppSidebar = () => {
     <div className="hidden lg:flex h-screen w-64 flex-col fixed left-0 top-[300px] bottom-0 bg-background border-r overflow-y-auto">
       <SidebarHeader />
       <SidebarNavigation />
-      <div className="p-4 border-t">
-        <HitCounter />
-      </div>
+      <HitCounter />
     </div>
   );
 };
