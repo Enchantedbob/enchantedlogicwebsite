@@ -1,41 +1,65 @@
 import { Link } from "react-router-dom";
-import { Home, Factory, Smartphone, ScrollText, DollarSign, Users, LogIn, ShieldCheck, Users as StaffIcon } from "lucide-react";
-
-interface NavItem {
-  to: string;
-  icon: React.ComponentType<any>;
-  label: string;
-}
-
-const navItems: NavItem[] = [
-  { to: "/", icon: Home, label: "Home" },
-  { to: "/services", icon: Factory, label: "We Make" },
-  { to: "/blog", icon: ScrollText, label: "Blog" },
-  { to: "/contact", icon: Smartphone, label: "Reach Us" },
-  { to: "/pricing", icon: DollarSign, label: "Money" },
-  { to: "/about", icon: Users, label: "Team" },
-  { to: "/login", icon: StaffIcon, label: "Staff" },
-  { to: "/remove-me", icon: ShieldCheck, label: "GDPR+" },
-  { to: "/login", icon: LogIn, label: "Staff Access" },
-];
+import { Home, Factory, ScrollText, Smartphone, DollarSign, Users, ShieldCheck, Users as StaffIcon } from "lucide-react";
 
 const SidebarNavigation = () => {
   return (
-    <nav className="flex-1 p-4">
-      <ul className="space-y-2">
-        {navItems.map((item) => (
-          <li key={item.to}>
-            <Link
-              to={item.to}
-              className="flex items-center p-2 hover:bg-accent rounded-md space-x-2"
-            >
-              <item.icon className="h-4 w-4" />
-              <span>{item.label}</span>
+    <div className="flex flex-col w-full">
+      <div className="p-4 border-b">
+        <h1 className="text-xl font-bold text-primary">Enchanted Logic</h1>
+      </div>
+      <nav className="p-4">
+        <ul className="space-y-2">
+          <li>
+            <Link to="/" className="flex items-center p-2 hover:bg-accent/10 rounded-md text-sm">
+              <Home className="h-4 w-4 mr-2" />
+              <span>Home</span>
             </Link>
           </li>
-        ))}
-      </ul>
-    </nav>
+          <li>
+            <Link to="/services" className="flex items-center p-2 hover:bg-accent/10 rounded-md text-sm">
+              <Factory className="h-4 w-4 mr-2" />
+              <span>We Make</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/blog" className="flex items-center p-2 hover:bg-accent/10 rounded-md text-sm">
+              <ScrollText className="h-4 w-4 mr-2" />
+              <span>Blog</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className="flex items-center p-2 hover:bg-accent/10 rounded-md text-sm">
+              <Smartphone className="h-4 w-4 mr-2" />
+              <span>Reach Us</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/pricing" className="flex items-center p-2 hover:bg-accent/10 rounded-md text-sm">
+              <DollarSign className="h-4 w-4 mr-2" />
+              <span>Money</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className="flex items-center p-2 hover:bg-accent/10 rounded-md text-sm">
+              <Users className="h-4 w-4 mr-2" />
+              <span>Team</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/staff" className="flex items-center p-2 hover:bg-accent/10 rounded-md text-sm">
+              <StaffIcon className="h-4 w-4 mr-2" />
+              <span>Staff</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/remove-me" className="flex items-center p-2 hover:bg-accent/10 rounded-md text-sm">
+              <ShieldCheck className="h-4 w-4 mr-2" />
+              <span>GDPR+</span>
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 };
 
