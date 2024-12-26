@@ -23,8 +23,8 @@ const AppSidebar = () => {
   };
 
   return (
-    <div className="hidden lg:flex h-screen w-64 flex-col fixed left-0 top-0 bottom-0 bg-background border-r overflow-y-auto">
-      <SidebarNavigation />
+    <div className="hidden lg:flex h-screen w-64 flex-col fixed left-0 top-[360px] bg-background border-r overflow-y-auto">
+            <SidebarNavigation />
       <HitCounter />
     </div>
   );

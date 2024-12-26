@@ -6,7 +6,7 @@ const Index = () => {
   return (
     <div className="animate-fade-in">
       {/* Hero Section - Full Width */}
-      <section className="w-full bg-gradient-to-r from-primary to-secondary text-white py-20">
+      <section className="w-full bg-gradient-to-r from-primary to-secondary text-white py-20 ">
         <div className="px-4">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -19,6 +19,7 @@ const Index = () => {
         </div>
       </section>
 
+     
       <div className="flex">
         {/* Left Side Section - 20% width */}
         <section className="relative w-1/5 bg-blue-100 min-h-[400px]">
@@ -81,6 +82,7 @@ const Index = () => {
         <div className="w-4/5">
           {/* Content will be added here */}
         </div>
+        
       </div>
     </div>
   );

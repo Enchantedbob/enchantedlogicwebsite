@@ -2,11 +2,13 @@ import { Link } from "react-router-dom";
 import { Home, Factory, ScrollText, Smartphone, DollarSign, Users, ShieldCheck, Users as StaffIcon } from "lucide-react";
 
 const SidebarNavigation = () => {
+  
   return (
     <div className="flex flex-col w-full">
       <div className="p-4 border-b">
         <h1 className="text-xl font-bold text-primary">Enchanted Logic</h1>
       </div>
+     
       <nav className="p-4">
         <ul className="space-y-2">
           <li>
@@ -18,7 +20,7 @@ const SidebarNavigation = () => {
           <li>
             <Link to="/services" className="flex items-center p-2 hover:bg-accent/10 rounded-md text-sm">
               <Factory className="h-4 w-4 mr-2" />
-              <span>We Make</span>
+              <span>We Make stuff</span>
             </Link>
           </li>
           <li>
@@ -59,8 +61,12 @@ const SidebarNavigation = () => {
           </li>
         </ul>
       </nav>
+    
     </div>
+  
   );
+
+
 };
 
 export default SidebarNavigation;
