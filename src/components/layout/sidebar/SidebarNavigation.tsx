@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Home, Factory, ScrollText, Smartphone } from "lucide-react";
-import HitCounter from "@/components/layout/sidebar/HitCounter";
+// import HitCounter from "@/components/layout/sidebar/HitCounter";
 
 const SidebarNavigation = () => {
   return (
@@ -31,6 +31,7 @@ const SidebarNavigation = () => {
           </Link>
         </li>
       </ul>
+      {/* <HitCounter /> */}
     </nav>
   );
 };
