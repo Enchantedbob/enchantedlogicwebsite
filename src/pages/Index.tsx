@@ -21,7 +21,7 @@ const Index = () => {
         </div>
       </section>
 
-      <div className="flex pt-56 mt-24">
+      <div className="flex pt-56 mt-24 overflow-hidden">
         {/* Left Side Section - 1/8 width */}
         <section className="relative w-1/8 bg-blue-100 min-h-[400px]">
           <SidebarNavigation />

@@ -3,7 +3,7 @@ import HitCounter from "@/components/layout/sidebar/HitCounter";
 
 const AppSidebar = () => {
   return (
-    <div className="hidden lg:flex h-screen w-64 flex-col fixed left-0 top-0 bg-background border-r overflow-y-auto">
+    <div className="hidden lg:flex h-screen w-64 flex-col fixed left-0 top-0 bg-background  overflow-y-auto">
       <SidebarNavigation/>
       <HitCounter/>
     </div>
