@@ -66,3 +66,8 @@
     border-radius: 0.375rem;
   }
 }
+.flex-grow p {
+  margin: 10px; /* Add margins to the paragraphs */
+  text-indent: 20px; /* Indent the first line of each paragraph */
+  margin-bottom: 20px; /* Add a line between paragraphs */
+}

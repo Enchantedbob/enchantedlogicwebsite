@@ -1,4 +1,4 @@
-import SidebarNavigation from "@/components/layout/sidebar/SidebarNavigation";
+import SidebarNavigation from "@/components/layout/sidebar/appsidebar";
 import HitCounter from "@/components/layout/sidebar/HitCounter";
 
 const AppSidebar = () => {

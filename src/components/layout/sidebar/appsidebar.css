@@ -1,0 +1,40 @@
+.sidebar-nav {
+  position: fixed;
+  top: 308px;
+  width: 200px;
+  height: calc(100vh - 308px); /* Adjust height to account for top */
+  padding: 20px;
+  /* padding-bottom: 50px; */ /* Add padding to the bottom of the menu */
+  z-index: 100;
+  background-color: white; /* Add this to make sure it's visible */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Push content to top and bottom */
+}
+
+.sidebar-nav.left {
+  left: 0;
+  border-right: 1px solid #e5e7eb;
+}
+
+.sidebar-nav.right {
+  right: 0;
+  border-left: 1px solid #e5e7eb;
+}
+
+.sidebar-nav-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hit-counter-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.hit-counter-container .absolute {
+  margin-left: 10px;
+}

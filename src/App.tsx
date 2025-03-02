@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { SidebarProvider } from "@/components/ui/sidebar";
-import AppSidebar from "./components/layout/Sidebar";
+import AppSidebar from "./components/layout/sidebar/AppSidebar";
 import Footer from "./components/layout/Footer";
 import Index from "./pages/Index";
 import Login from "./pages/Login";
