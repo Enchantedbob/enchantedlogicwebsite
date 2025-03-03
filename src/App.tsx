@@ -15,7 +15,7 @@ import Blog from "./pages/Blog";
 const queryClient = new QueryClient();
 
 // Calculate the height of the hero section (py-16 = 4rem, plus content)
-const heroHeight = "calc(4rem + 120px)";
+const heroHeight = "160px";
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -26,7 +26,7 @@ const App = () => (
         <SidebarProvider>
           <div className="min-h-screen flex w-full">
             {/* Hero Section - Full Width */}
-            <section className="w-full bg-gradient-to-r from-primary to-secondary text-white py-16 fixed top-0 left-0 right-0 z-10">
+            <section className="w-full bg-gradient-to-r from-primary to-secondary text-white py-16 fixed top-0 left-0 right-0 z-10" style={{ height: "160px" }}>
               <div className="px-4">
                 <div className="max-w-3xl">
                   <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -40,11 +40,11 @@ const App = () => (
             </section>
             
             {/* Left Sidebar */}
-            <div className="fixed left-0 bg-blue-100 overflow-y-auto flex flex-col" style={{ 
+            <div className="fixed left-0 bg-blue-100 overflow-visible flex flex-col" style={{ 
               width: '187.5px',
               top: heroHeight,
               bottom: 0,
-              paddingTop: "2.5em",
+              paddingTop: "0",
               borderRight: "1px solid #e5e7eb",
               height: "calc(100vh - " + heroHeight + ")"
             }}>
@@ -54,7 +54,7 @@ const App = () => (
             {/* Main Content Area */}
             <div className="flex-1 flex flex-col">
               <main className="flex-grow overflow-y-auto" style={{ 
-                marginTop: "calc(" + heroHeight + " + 2.5em)",
+                marginTop: heroHeight,
                 marginLeft: "187.5px",
                 marginRight: "187.5px",
                 padding: "20px"
@@ -70,11 +70,11 @@ const App = () => (
             </div>
             
             {/* Right Sidebar */}
-            <div className="fixed right-0 bg-blue-100 overflow-y-auto flex flex-col" style={{ 
+            <div className="fixed right-0 bg-blue-100 overflow-visible flex flex-col" style={{ 
               width: '187.5px',
               top: heroHeight,
               bottom: 0,
-              paddingTop: "2.5em",
+              paddingTop: "0",
               borderLeft: "1px solid #e5e7eb",
               height: "calc(100vh - " + heroHeight + ")"
             }}>

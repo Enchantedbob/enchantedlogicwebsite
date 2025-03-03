@@ -5,9 +5,9 @@ import HitCounter from "./HitCounter";
 
 const AppSidebar = () => {
   return (
-    <div className="h-full flex flex-col justify-between">
-      <nav className="sidebar-nav left bg-blue-100 w-full">
-        <ul className="space-y-3">
+    <div className="h-full flex flex-col">
+      <nav className="sidebar-nav left bg-blue-100 w-full p-2 pt-4">
+        <ul className="space-y-2">
           <li>
             <Link to="/" className="flex items-center p-2 hover:bg-blue-200 rounded-md">
               <Home className="h-5 w-5" />

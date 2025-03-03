@@ -6,39 +6,39 @@ const RightSideMenu = () => {
   const [showChatWindow, setShowChatWindow] = useState(false);
   
   return (
-    <div className="h-full flex flex-col justify-between p-2">
+    <div className="h-full flex flex-col p-2 pt-4">
       <div>
-      <div className="mb-4">
+      <div className="mb-2">
         <Link to="/pricing" className="flex items-center justify-end p-2 hover:bg-blue-200 rounded-md">
           <span className="mr-2 text-right text-base">Money</span>
           <DollarSign className="h-5 w-5" />
         </Link>
       </div>
-      <div className="mb-4">
+      <div className="mb-2">
         <Link to="/about" className="flex items-center justify-end p-2 hover:bg-blue-200 rounded-md">
           <span className="mr-2 text-right text-base">About Us</span>
           <Users className="h-5 w-5" />
         </Link>
       </div>
-      <div className="mb-4">
+      <div className="mb-2">
         <Link to="/staff" className="flex items-center justify-end p-2 hover:bg-blue-200 rounded-md">
           <span className="mr-2 text-right text-base">Staff</span>
           <StaffIcon className="h-5 w-5" />
         </Link>
       </div>
-      <div className="mb-4">
+      <div className="mb-2">
         <Link to="/remove-me" className="flex items-center justify-end p-2 hover:bg-blue-200 rounded-md">
           <span className="mr-2 text-right text-base">GDPR+</span>
           <ShieldCheck className="h-5 w-5" />
         </Link>
       </div>
-      <div className="mb-4">
+      <div className="mb-2">
         <Link to="/help" className="flex items-center justify-end p-2 hover:bg-blue-200 rounded-md">
           <span className="mr-2 text-right text-base">Help</span>
           <HelpCircle className="h-5 w-5" />
         </Link>
       </div>
-      <div className="mb-4">
+      <div className="mb-2">
         <Link to="/documentation" className="flex items-center justify-end p-2 hover:bg-blue-200 rounded-md">
           <span className="mr-2 text-right text-base">Documentation</span>
           <BookOpen className="h-5 w-5" />
