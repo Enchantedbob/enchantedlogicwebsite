@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+ import { Link } from "react-router-dom";
 import { DollarSign, Users, ShieldCheck, Users as StaffIcon, MessageCircle, HelpCircle, Settings, BookOpen } from "lucide-react";
 import { useState } from "react";
 
@@ -6,7 +6,7 @@ const RightSideMenu = () => {
   const [showChatWindow, setShowChatWindow] = useState(false);
   
   return (
-    <div className="h-full flex flex-col p-2 pt-4">
+    <div className="h-full flex flex-col p-2 pt-16">
       <div>
       <div className="mb-2">
         <Link to="/pricing" className="flex items-center justify-end p-2 hover:bg-blue-200 rounded-md">

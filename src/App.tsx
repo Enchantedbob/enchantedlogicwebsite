@@ -15,7 +15,7 @@ import Blog from "./pages/Blog";
 const queryClient = new QueryClient();
 
 // Calculate the height of the hero section (py-16 = 4rem, plus content)
-const heroHeight = "160px";
+const heroHeight = "260px";
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -26,7 +26,7 @@ const App = () => (
         <SidebarProvider>
           <div className="min-h-screen flex w-full">
             {/* Hero Section - Full Width */}
-            <section className="w-full bg-gradient-to-r from-primary to-secondary text-white py-16 fixed top-0 left-0 right-0 z-10" style={{ height: "160px" }}>
+            <section className="w-full bg-gradient-to-r from-primary to-secondary text-white py-16 fixed top-0 left-0 right-0 z-10" style={{ height: "260px" }}>
               <div className="px-4">
                 <div className="max-w-3xl">
                   <h1 className="text-4xl md:text-6xl font-bold mb-6">
