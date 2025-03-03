@@ -39,12 +39,6 @@ const RightSideMenu = () => {
         </Link>
       </div>
       <div className="mb-4">
-        <Link to="/settings" className="flex items-center justify-end p-2 hover:bg-blue-200 rounded-md">
-          <span className="mr-2 text-right text-base">Settings</span>
-          <Settings className="h-5 w-5" />
-        </Link>
-      </div>
-      <div className="mb-4">
         <Link to="/documentation" className="flex items-center justify-end p-2 hover:bg-blue-200 rounded-md">
           <span className="mr-2 text-right text-base">Documentation</span>
           <BookOpen className="h-5 w-5" />

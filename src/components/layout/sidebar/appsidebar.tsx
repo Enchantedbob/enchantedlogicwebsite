@@ -39,12 +39,6 @@ const AppSidebar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/signup" className="flex items-center p-2 hover:bg-blue-200 rounded-md">
-              <Users className="h-5 w-5" />
-              <span className="ml-2 text-left text-base">Signup</span>
-            </Link>
-          </li>
-          <li>
             <Link to="/faq" className="flex items-center p-2 hover:bg-blue-200 rounded-md">
               <HelpCircle className="h-5 w-5" />
               <span className="ml-2 text-left text-base">FAQ</span>
