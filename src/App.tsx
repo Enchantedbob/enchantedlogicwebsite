@@ -44,7 +44,7 @@ const App = () => (
               width: '187.5px',
               top: heroHeight,
               bottom: 0,
-              paddingTop: "0",
+              paddingTop: "2.5em",
               borderRight: "1px solid #e5e7eb",
               height: "calc(100vh - " + heroHeight + ")"
             }}>
@@ -54,7 +54,7 @@ const App = () => (
             {/* Main Content Area */}
             <div className="flex-1 flex flex-col">
               <main className="flex-grow overflow-y-auto" style={{ 
-                marginTop: heroHeight,
+                marginTop: "calc(" + heroHeight + " + 2.5em)",
                 marginLeft: "187.5px",
                 marginRight: "187.5px",
                 padding: "20px"
@@ -74,7 +74,7 @@ const App = () => (
               width: '187.5px',
               top: heroHeight,
               bottom: 0,
-              paddingTop: "0",
+              paddingTop: "2.5em",
               borderLeft: "1px solid #e5e7eb",
               height: "calc(100vh - " + heroHeight + ")"
             }}>
