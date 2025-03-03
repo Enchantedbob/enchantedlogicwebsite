@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { Home, Factory, ScrollText, Smartphone } from "lucide-react";
-import "./AppSidebar.css";
+import { Home, Factory, ScrollText, Smartphone, Users, HelpCircle } from "lucide-react";
+import "./appsidebar.css";
 import HitCounter from "./HitCounter";
 
 const AppSidebar = () => {
   return (
-    <section className="fixed left-0 top-56 w-1/8 bg-blue-100 min-h-[400px]" style={{ maxWidth: '12.5%' }}>
-      <nav className="sidebar-nav left bg-blue-100 max-w-full">
+    <div className="h-full flex flex-col justify-between">
+      <nav className="sidebar-nav left bg-blue-100 w-full">
         <ul className="space-y-3">
           <li>
             <Link to="/" className="flex items-center p-2 hover:bg-blue-200 rounded-md">
@@ -32,10 +32,30 @@ const AppSidebar = () => {
               <span className="ml-2 text-left text-base">Contact</span>
             </Link>
           </li>
+          <li>
+            <Link to="/login" className="flex items-center p-2 hover:bg-blue-200 rounded-md">
+              <Users className="h-5 w-5" />
+              <span className="ml-2 text-left text-base">Login</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/signup" className="flex items-center p-2 hover:bg-blue-200 rounded-md">
+              <Users className="h-5 w-5" />
+              <span className="ml-2 text-left text-base">Signup</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/faq" className="flex items-center p-2 hover:bg-blue-200 rounded-md">
+              <HelpCircle className="h-5 w-5" />
+              <span className="ml-2 text-left text-base">FAQ</span>
+            </Link>
+          </li>
         </ul>
       </nav>
-      <HitCounter />
-    </section>
+      <div className="mt-auto p-2 flex justify-start pl-0">
+        <HitCounter />
+      </div>
+    </div>
   );
 };
 

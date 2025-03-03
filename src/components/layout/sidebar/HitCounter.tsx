@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { Hash } from "lucide-react";
-import "./AppSidebar.css";
+import "./appsidebar.css";
 
 const HitCounter = () => {
   const [showHitCount, setShowHitCount] = useState(false);
 
   return (
     <div 
-      className="hit-counter-container cursor-pointer"
+      className="hit-counter-container cursor-pointer ml-0"
       onMouseEnter={() => setShowHitCount(true)}
       onMouseLeave={() => setShowHitCount(false)}
     >
